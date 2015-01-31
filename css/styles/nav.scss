@@ -1,0 +1,178 @@
+header {
+  background-image: url('../images/login-background.jpg');
+  height: 100vh;
+  max-height: 800px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: none;
+  background-position: center 35%;
+  text-align: center;
+
+  #slidr-div{
+    display: inline-block;
+    font-weight: bold;
+    line-height: 0.8;
+    float: right;
+
+    .box {
+      background-color: #f39c12;
+      color: white;
+      min-height: 40px;
+      line-height: 40px;
+      min-width: 290px;
+      padding-left: 10px;
+      margin-top: 5px;
+      border-radius: 3px;
+    }
+  }
+
+  .navigation {
+    $black: #000;
+    $large-screen: em(860) !default;
+    position: fixed;
+    
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    $navigation-padding: 1em;
+    $navigation-background: $black;
+    $navigation-color-hover: white;
+    $navigation-height: 52px;
+    $horizontal-bar-mode: $large-screen;
+
+    background-color: $navigation-background;
+    border-bottom: 1px solid darken($navigation-background, 10);
+    min-height: $navigation-height;
+    width: 100%;
+    z-index: 999;
+
+    .navigation-wrapper {
+      @include clearfix;
+      @include outer-container;
+      position: relative;
+      z-index: 9999;
+       text-align: left;
+       padding-left: 1
+    }
+
+    nav {
+      float: none;
+      min-height: $navigation-height;
+      z-index: 9999999;
+
+      @include media ($horizontal-bar-mode) {
+        float: left;
+      }
+    }
+
+    .navigation-tools {
+      background: $black;
+      clear: both;
+      display: block;
+      height: $navigation-height;
+      padding-left: $navigation-padding / 2;
+      padding-right: $navigation-padding;
+
+      @include media($large-screen) {
+        background: transparent;
+        clear: none;
+        float: right;
+      }
+  }
+
+  .sliding-menu-content {  
+      $black: #000!default;
+
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        list-style: none;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      $sliding-menu-border-color: $black;
+      $sliding-menu-background: lighten($sliding-menu-border-color, 5%);
+      $sliding-menu-color: #fff;
+      $sliding-menu-border: 1px solid $sliding-menu-border-color;
+      $sliding-menu-background-hover: $black;
+      $sliding-menu-color-hover: #fff;
+      $sliding-menu-background-focus: lighten($sliding-menu-background, 5%);
+
+      @include position(fixed, 0px 0px 0px 0px);
+      @include size(120px 100%);
+      @include transform(translateX(-220px));
+      @include transition(all 0.25s linear);
+      background: $sliding-menu-background;
+      z-index: 999999;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+
+      li a {
+        border-bottom: $sliding-menu-border;
+        color: $sliding-menu-color;
+        display: block;
+        font-weight: bold;
+        padding: 1em;
+
+        &:focus {
+          background-color: $sliding-menu-background-focus;
+        }
+
+        &:hover {
+          background-color: #3498db;
+          color: $sliding-menu-color-hover;
+        }
+      }
+
+      &.is-visible {
+        @include transform(translateX(0));
+      }
+    }
+
+    
+        button {
+          @include button(shiny, #3498db);
+          height: 40px;
+          margin-top: 7px;
+          float: left;
+          color: #fff !important;
+          margin-left: 10px; 
+        }
+   
+    }
+    
+
+  #logo {
+    min-height: 250px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 175px;
+    @include media(max-width 769px) {
+       width: 90%;
+     }
+
+    img {
+      width: 80%;
+
+    }
+  }
+  p {
+      font-size: 2em;
+      color: #fff;
+      text-align: center
+    }
+  button {
+    @include button(shiny, #f39c12);
+    color: white;
+  }  
+
+}

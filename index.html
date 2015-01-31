@@ -2,15 +2,43 @@
 <html>
 	<head>
 	    <meta charset="utf-8">
-	    <title>sample landing page</title>
+	    <title>landing page</title>
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
 	    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+
 	</head>
 	<body>
-		<div id="container">
-		    <p>Check console and js files</p>
-		</div>
-			<button>hey</button>
+		<header>
+		  <div class="navigation">
+			  <div class="navigation-wrapper">
+			  	<button class="js-menu-trigger sliding-menu-button"><a href="javascript:void(0)" class="nav-menu"> Menu</a></button>
+					<nav class="js-menu sliding-menu-content">
+					  <ul>
+					    <li><a href="javascript:void(0)">Item 1</a></li>
+					    <li><a href="javascript:void(0)">Item 2</a></li>
+					    <li><a href="javascript:void(0)">Item 3</a></li>
+					  </ul>
+					</nav>
+					<div class="js-menu-screen sliding-menu-fade-screen"></div>
+			    
+			    <div class="navigation-tools">
+					<a href="javascript:void(0)" >
+				   		<div id="slidr-div">
+						    <div class='box' data-slidr="one">7:00pm hockey 1 sub needed. </div>
+						    <div class='box' data-slidr="two">7:00pm hockey 1 sub needed. </div>
+						    <div class='box' data-slidr="three">7:00pm hockey 1 sub needed. </div>
+						    <div class='box' data-slidr="four">7:00pm hockey 1 sub needed. </div> 
+					    </div>
+			    	</a>
+			    </div>
+			  </div>
+		  </div>
+		  <div id='logo'>
+		  	<img src="images/logo-bg.png">
+		  </div>
+		  <p>The app recreational sports has been waiting for.</p>
+		  <button>Create your account</button>
+		</header>
 		<script data-main="js/main" src="js/vendor/require.js"></script>
 	</body>
 </html>
