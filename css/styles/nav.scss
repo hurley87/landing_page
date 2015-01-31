@@ -19,10 +19,16 @@ header {
       color: white;
       min-height: 40px;
       line-height: 40px;
-      min-width: 290px;
+      min-width: 260px;
+      text-align: center;
+      width: 100%;
       padding-left: 10px;
       margin-top: 5px;
       border-radius: 3px;
+
+      img {
+        margin: 5px 10px 0 5px;
+       }
     }
   }
 
@@ -98,37 +104,29 @@ header {
         text-decoration: none;
       }
 
-      $sliding-menu-border-color: $black;
-      $sliding-menu-background: lighten($sliding-menu-border-color, 5%);
-      $sliding-menu-color: #fff;
-      $sliding-menu-border: 1px solid $sliding-menu-border-color;
-      $sliding-menu-background-hover: $black;
-      $sliding-menu-color-hover: #fff;
-      $sliding-menu-background-focus: lighten($sliding-menu-background, 5%);
-
       @include position(fixed, 0px 0px 0px 0px);
-      @include size(120px 100%);
+      @include size(150px 100%);
       @include transform(translateX(-220px));
       @include transition(all 0.25s linear);
-      background: $sliding-menu-background;
+      @include linear-gradient(to right, #000 95%, #3498db 5%);
       z-index: 999999;
       overflow-y: auto;
       -webkit-overflow-scrolling: touch;
 
       li a {
-        border-bottom: $sliding-menu-border;
-        color: $sliding-menu-color;
+        color: #fff;
         display: block;
         font-weight: bold;
         padding: 1em;
+        height: 53px;
 
         &:focus {
-          background-color: $sliding-menu-background-focus;
+          background-color: #000;
         }
 
         &:hover {
-          background-color: #3498db;
-          color: $sliding-menu-color-hover;
+          @include linear-gradient(to right, #000, #3498db);
+          color: white;
         }
       }
 
@@ -174,5 +172,9 @@ header {
     @include button(shiny, #f39c12);
     color: white;
   }  
+  .dropdown {
+     padding-top: 140px;
+
+  }
 
 }

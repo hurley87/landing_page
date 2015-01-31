@@ -217,10 +217,14 @@ header {
       color: white;
       min-height: 40px;
       line-height: 40px;
-      min-width: 290px;
+      min-width: 260px;
+      text-align: center;
+      width: 100%;
       padding-left: 10px;
       margin-top: 5px;
       border-radius: 3px; }
+      header #slidr-div .box img {
+        margin: 5px 10px 0 5px; }
   header .navigation {
     position: fixed;
     background-color: #000;
@@ -273,7 +277,7 @@ header {
       bottom: 0px;
       left: 0px;
       height: 100%;
-      width: 120px;
+      width: 150px;
       -webkit-transform: translateX(-220px);
       -moz-transform: translateX(-220px);
       -ms-transform: translateX(-220px);
@@ -282,7 +286,9 @@ header {
       -webkit-transition: all 0.25s linear;
       -moz-transition: all 0.25s linear;
       transition: all 0.25s linear;
-      background: #0d0d0d;
+      background-color: #000;
+      background-image: -webkit-linear-gradient(left, #000 95%, #3498db 5%);
+      background-image: linear-gradient(to right,#000 95%, #3498db 5%);
       z-index: 999999;
       overflow-y: auto;
       -webkit-overflow-scrolling: touch; }
@@ -294,16 +300,18 @@ header {
       header .navigation .sliding-menu-content a {
         text-decoration: none; }
       header .navigation .sliding-menu-content li a {
-        border-bottom: 1px solid #000;
         color: #fff;
         display: block;
         font-weight: bold;
-        padding: 1em; }
+        padding: 1em;
+        height: 53px; }
         header .navigation .sliding-menu-content li a:focus {
-          background-color: #1a1a1a; }
+          background-color: #000; }
         header .navigation .sliding-menu-content li a:hover {
-          background-color: #3498db;
-          color: #fff; }
+          background-color: #000;
+          background-image: -webkit-linear-gradient(left, #000, #3498db);
+          background-image: linear-gradient(to right,#000, #3498db);
+          color: white; }
       header .navigation .sliding-menu-content.is-visible {
         -webkit-transform: translateX(0);
         -moz-transform: translateX(0);
@@ -383,5 +391,7 @@ header {
     header button:disabled {
       opacity: 0.5;
       cursor: not-allowed; }
+  header .dropdown {
+    padding-top: 140px; }
 
 /*# sourceMappingURL=main.css.map */
