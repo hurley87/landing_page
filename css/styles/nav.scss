@@ -82,9 +82,7 @@
     @include size(150px 100%);
     @include transform(translateX(-220px));
     @include transition(all 0.25s linear);
-    @include linear-gradient(to right, $black 95%, $blue 5%);
-    
-    
+    @include linear-gradient(to right, $black 95%, $blue 5%); 
   }
 
   .sliding-menu-button {
@@ -118,8 +116,7 @@
   @include media(max-width 769px) {
     padding-left: 0;
     padding-right: 2%;
-  }
- 
+  } 
 }
   
 
