@@ -1,180 +1,126 @@
-header {
-  background-image: url('../images/login-background.jpg');
-  height: 100vh;
-  max-height: 800px;
+.navigation {
+  $black: #000;
+  $white: #fff;
+  $orange: #f39c12;
+  $blue: #3498db;
+  $large-screen: em(860) !default;
+  $navigation-padding: 1em;
+  $navigation-background: $black;
+  $navigation-color-hover: white;
+  $navigation-height: 52px;
+  $horizontal-bar-mode: $large-screen;
+
+  position: fixed;
+  background-color: $navigation-background;
+  min-height: $navigation-height;
   width: 100%;
-  background-size: cover;
-  background-repeat: none;
-  background-position: center 35%;
-  text-align: center;
+  z-index: 999;
+  padding-right: 10%;
+  padding-left: 10%;
+  
+  a {
+    text-decoration: none;
+    color: $white;
+  }
 
-  #slidr-div{
-    display: inline-block;
-    font-weight: bold;
-    line-height: 0.8;
-    float: right;
+  .navigation-wrapper {
+    @include clearfix;
+    @include outer-container;
+    position: relative;
+    z-index: 9999;
+    text-align: left;
+    padding-left: 1;
+    float: left;
+  }
 
-    .box {
-      background-color: #f39c12;
-      color: white;
-      min-height: 40px;
-      line-height: 40px;
-      min-width: 260px;
-      text-align: center;
-      width: 100%;
-      padding-left: 10px;
-      margin-top: 5px;
-      border-radius: 3px;
-
-      img {
-        margin: 5px 10px 0 5px;
-       }
+  nav {
+    float: none;
+    min-height: $navigation-height;
+    z-index: 9999999;
+    @include media ($horizontal-bar-mode) {
+      float: left;
     }
   }
 
-  .navigation {
-    $black: #000;
-    $large-screen: em(860) !default;
-    position: fixed;
+.sliding-menu-content { 
+  z-index: 999999;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch; 
+
+  ul {
+    padding: 0;
+    margin: 0;
+
+    li {
+      list-style: none;
+    }
+  }
+
+  li a {
+    color: $white;
+    display: block;
+    font-weight: bold;
+    padding: 1em;
+    height: 53px;
+    text-decoration: none;
+
+    &:focus {
+      background-color: $black;
+    }
+
+    &:hover {
+      @include linear-gradient(to right, $black, $blue);
+      color: white;
+    }
+  }
+
+    &.is-visible {
+      @include transform(translateX(0));
+    }
+    
+    @include position(fixed, 0px 0px 0px 0px);
+    @include size(150px 100%);
+    @include transform(translateX(-220px));
+    @include transition(all 0.25s linear);
+    @include linear-gradient(to right, $black 95%, $blue 5%);
+    
+    
+  }
+
+  .sliding-menu-button {
+    @include button(shiny, $blue);
+    height: 40px;
+    margin-top: 7px;
+    float: left;
+    color: $white;
+    margin-left: 10px; 
+  }
+
+  .signin-btn {
+    float: right;
+    font-weight: bold;
+    line-height: 52px;
     
     a {
-      text-decoration: none;
-      color: #fff;
-    }
+      color: $blue;
+      border: 1px solid $blue;
+      padding: 5px 15px 8px 15px;
+      border-radius: 5px;
 
-    $navigation-padding: 1em;
-    $navigation-background: $black;
-    $navigation-color-hover: white;
-    $navigation-height: 52px;
-    $horizontal-bar-mode: $large-screen;
-
-    background-color: $navigation-background;
-    border-bottom: 1px solid darken($navigation-background, 10);
-    min-height: $navigation-height;
-    width: 100%;
-    z-index: 999;
-
-    .navigation-wrapper {
-      @include clearfix;
-      @include outer-container;
-      position: relative;
-      z-index: 9999;
-       text-align: left;
-       padding-left: 1
-    }
-
-    nav {
-      float: none;
-      min-height: $navigation-height;
-      z-index: 9999999;
-
-      @include media ($horizontal-bar-mode) {
-        float: left;
+      &:hover {
+        @include transition(all 1.5s ease-in-out);
+        background-color: $blue;
+        color: white;
       }
     }
-
-    .navigation-tools {
-      background: $black;
-      clear: both;
-      display: block;
-      height: $navigation-height;
-      padding-left: $navigation-padding / 2;
-      padding-right: $navigation-padding;
-
-      @include media($large-screen) {
-        background: transparent;
-        clear: none;
-        float: right;
-      }
   }
 
-  .sliding-menu-content {  
-      $black: #000!default;
-
-      ul {
-        padding: 0;
-        margin: 0;
-      }
-
-      li {
-        list-style: none;
-      }
-
-      a {
-        text-decoration: none;
-      }
-
-      @include position(fixed, 0px 0px 0px 0px);
-      @include size(150px 100%);
-      @include transform(translateX(-220px));
-      @include transition(all 0.25s linear);
-      @include linear-gradient(to right, #000 95%, #3498db 5%);
-      z-index: 999999;
-      overflow-y: auto;
-      -webkit-overflow-scrolling: touch;
-
-      li a {
-        color: #fff;
-        display: block;
-        font-weight: bold;
-        padding: 1em;
-        height: 53px;
-
-        &:focus {
-          background-color: #000;
-        }
-
-        &:hover {
-          @include linear-gradient(to right, #000, #3498db);
-          color: white;
-        }
-      }
-
-      &.is-visible {
-        @include transform(translateX(0));
-      }
-    }
-
-    
-        button {
-          @include button(shiny, #3498db);
-          height: 40px;
-          margin-top: 7px;
-          float: left;
-          color: #fff !important;
-          margin-left: 10px; 
-        }
-   
-    }
-    
-
-  #logo {
-    min-height: 250px;
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    padding-top: 175px;
-    @include media(max-width 769px) {
-       width: 90%;
-     }
-
-    img {
-      width: 80%;
-
-    }
+  @include media(max-width 769px) {
+    padding-left: 0;
+    padding-right: 2%;
   }
-  p {
-      font-size: 2em;
-      color: #fff;
-      text-align: center
-    }
-  button {
-    @include button(shiny, #f39c12);
-    color: white;
-  }  
-  .dropdown {
-     padding-top: 140px;
-
-  }
-
+ 
 }
+  
+
+

@@ -1,0 +1,65 @@
+header {
+  $orange: #f39c12;
+  background-image: url('../images/login-background.jpg');
+  height: 100vh;
+  max-height: 800px;
+  width: 100%;
+  background-size: cover;
+  background-repeat: none;
+  background-position: center 35%;
+  text-align: center;
+
+  .ticker {
+    background-color: $orange;
+    height: 25px;
+    top: 52px;
+    position: absolute;
+    width: 100%;
+    color: #000;
+    font-weight: bold;
+  }
+
+  #logo {
+    min-height: 200px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    padding-top: 125px;
+    padding-bottom: 10px;
+    @include media(max-width 769px) {
+       width: 90%;
+       padding-bottom: -100px !important;
+     }
+
+    img {
+      width: 80%;
+
+    }
+  }
+
+  p.tagline {
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+    padding-bottom: 20px;
+    @include media(max-width 769px) {
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20px;
+       font-size: 1.5em;
+       text-align: left;
+     }
+  }
+
+  .signup-btn {
+    @include button(shiny, #f39c12);
+    color: white;
+    font-size: 1.5em;
+  }  
+
+  .dropdown-arrow {
+     padding-top: 75px;
+
+  }
+
+ } 

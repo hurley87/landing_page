@@ -2,7 +2,8 @@ require.config({
     paths: {
         'jQuery': 'vendor/jquery-1.11.2.min',
         'underscore': 'vendor/underscore',
-        'slidr': 'vendor/slidr'
+        'slidr': 'vendor/slidr',
+        'scrollto': 'vendor/scrollto.min'
     },
     shim: {
         'jQuery': {
@@ -17,12 +18,10 @@ require.config({
 
 require(['jQuery'], function ($) {
    $(document).ready(function(){
-    $('.nav-menu, .js-menu').on('click touchstart',function (e) {
+    $('.nav-menu, .js-menu').on('click',function (e) {
       $('.js-menu').toggleClass('is-visible');
       e.preventDefault();
-      
     });
-    
   });
 });
 
@@ -31,17 +30,14 @@ require(['slidr'], function (slidr) {
             direction: 'vertical',
             overflow: true,
             pause: false,
-            timing: { 'cube': '1.5s ease-in' },
+            timing: { 'linear': '1.5s ease-in' },
             touch: true,
-            transition: 'cube',
+            transition: 'linear',
             controls: 'none'
         }).add('h', ['one', 'two', 'three', 'four', 'one'])
-          .auto(10000);
+          .auto(5000);
 });
 
-require(['hello'], function() {
-  
-});
 
 
 
