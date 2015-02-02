@@ -2,13 +2,18 @@
 <html>
 	<head>
 	    <meta charset="utf-8">
-	    <title>landing page</title>
+	    <title>subzie</title>
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
 	    <link rel="stylesheet" type="text/css" href="css/normalize.css">
-	    <script data-main="js/main" src="js/vendor/require.js"></script>
+	    <script data-main="js/main" src="js/lib/require.js"></script>
 	</head>
 	<body>
+
+
+		<!-- header -->
 		<header id='top'>
+
+		  <!-- nav  -->
 		  <div class="navigation">
 			  <div class="navigation-wrapper">
 			  	<button class="js-menu-trigger sliding-menu-button"><a href="#" class="nav-menu">MENU</a></button>
@@ -23,16 +28,31 @@
 					</nav>
 					<div class="js-menu-screen sliding-menu-fade-screen"></div>
 			  </div>
-			  <div class='signin-btn'>
-			  	<a href="#">sign in</a>
+
+			  <!-- modal -->
+			  <div class='signin-btn modal'>
+			    <label for="modal-1">
+			  		<span class='modal-trigger'>sign in</span>
+			  	</label>	
+			  	<input class="modal-state" id="modal-1" type="checkbox"/>
+			  	<div class="modal-window">
+				    <div class="modal-inner">
+				      <label class="modal-close" for="modal-1"></label>
+				      <h1>Sign In</h1>
+				    </div>
+			    </div>
 			  </div>
 		  </div>
+
+		  <!-- slidr -->
 		  <div id="slidr-div">
 		    <div class='ticker' data-slidr="one">Toronto - a hockey team playing at 10pm today tonight needs 3 subs.</div>
 		    <div class='ticker' data-slidr="two">Toronto - a football team playing at 9pm today needs 1 sub.</div>
 		    <div class='ticker' data-slidr="three">Toronto - a baseball team playing at 10pm tomorrow needs 2 subs.</div>
 		    <div class='ticker' data-slidr="four">Toronto - a basketball team playing at 11pm tomorrow needs 3 subs.</div> 
-	    </div>
+	      </div>
+
+	      <!-- header content -->
 		  <div id='logo'>
 		  	<img src="images/logo-bg.png">
 		  </div>
@@ -43,15 +63,23 @@
 		  		<img src="images/dropdown.png">
 		  </div>
 		</header>
+
+		<!-- first section -->
 		<section id='findgame'>
 			
 		</section>
+
+		<!-- second section -->
 		<section id='findsub'>
 			
 		</section>
+
+		<!-- third section -->
 		<section id='leagues'>
 			
 		</section>
+
+		<!-- footer -->
 		<footer id='contact'>
 			
 		</footer>

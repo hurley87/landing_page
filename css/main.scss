@@ -2,10 +2,12 @@
 /* base file (main.scss) should only contain imports - one aspect of setting up sass in a modular way */
 /* vendor helpers - bourbon and the bourbon family (neat, bitters, refills) */
 @import 'bourbon/bourbon';
-@import "neat/neat";
 @import "base/base";
+@import "neat/neat";
+
 
 /* my styles */
 @import 'styles/index';
 @import 'styles/nav';
 @import 'styles/header';
+@import 'styles/modal';

@@ -100,11 +100,12 @@
     font-weight: bold;
     line-height: 52px;
     
-    a {
+    .modal-trigger {
       color: $blue;
       border: 1px solid $blue;
       padding: 5px 15px 8px 15px;
       border-radius: 5px;
+      cursor: pointer;
 
       &:hover {
         @include transition(all 1.5s ease-in-out);
