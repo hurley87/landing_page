@@ -15,7 +15,6 @@ require.config({
     }
 });
 
-
 require(['jQuery'], function ($) {
    $(document).ready(function(){
     $('.nav-menu, .js-menu').on('click',function (e) {
@@ -23,6 +22,17 @@ require(['jQuery'], function ($) {
       e.preventDefault();
     });
   });
+   require(['scrollto'], function (scrollTo) {
+        require(['jQuery'], function ($) {
+            $('.scroll-link').click(function(){
+                $('.js-menu').toggleClass('is-visible');
+                $.scrollTo( $(this).attr("href"), {
+                    duration: 1000          
+                });
+                return false;
+            });
+        });
+    });
 });
 
 require(['slidr'], function (slidr) {
@@ -37,6 +47,9 @@ require(['slidr'], function (slidr) {
         }).add('h', ['one', 'two', 'three', 'four', 'one'])
           .auto(5000);
 });
+
+
+
 
 
 

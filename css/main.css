@@ -198,14 +198,17 @@ picture {
   max-width: 100%; }
 
 /* my styles */
+section {
+  height: 600px; }
+
 .navigation {
   position: fixed;
   background-color: #000;
   min-height: 52px;
   width: 100%;
   z-index: 999;
-  padding-right: 10%;
-  padding-left: 10%; }
+  padding-right: 11%;
+  padding-left: 11%; }
   .navigation a {
     text-decoration: none;
     color: #fff; }
@@ -266,6 +269,7 @@ picture {
       font-weight: bold;
       padding: 1em;
       height: 53px;
+      font-size: 0.9em;
       text-decoration: none; }
       .navigation .sliding-menu-content li a:focus {
         background-color: #000; }
