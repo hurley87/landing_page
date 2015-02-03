@@ -1,4 +1,82 @@
+
 section {
-	height: 600px;
+	height: 400px;
+	padding: 2em;
 }
 
+.container {
+	@include outer-container();
+}
+
+.clear {
+	clear: both;
+}
+
+#sub-soln  {
+	@include row();
+	@include linear-gradient(to top,  #3498db, #000);
+	background-color: #000;
+	color: white;
+	clear: both;
+	.soln-info { 
+		h1 {
+			font-size: 2.7em;
+
+		}
+
+		p {
+			font-size: 1.7em;
+		}
+		@include span-columns(5); 
+		@include media(max-width 420px) {
+		    @include span-columns(12);
+		    @include shift(0);
+		    @include outer-container(100%)
+		}
+	}
+	.soln-img { 
+		@include span-columns(5); 
+		@include media(max-width 420px) {
+		    @include span-columns(12);
+		}
+	}
+}
+
+#findgame {
+	@include row();
+	@include linear-gradient(to top,  #fff, #3498db);
+}
+
+#findsub {
+    @include row();
+	@include linear-gradient(to top,  #3498db, #fff);
+}
+
+#leagues {
+	@include linear-gradient(to top,  #000, #3498db);
+
+	h1 {
+		text-align: center;
+		color: white;
+	}
+}
+
+.testimonials {
+	background-color: white;
+	height: 200px;
+	text-align: center;
+
+	h1 {
+		
+	}
+	.quote {
+		margin: auto;
+		width: 100%;
+		font-size: 1.5em;
+	}
+}
+
+footer {
+	height: 300px;
+	background-color: #000;
+}

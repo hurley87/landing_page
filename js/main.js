@@ -4,7 +4,8 @@ require.config({
         'underscore': 'lib/underscore',
         'slidr': 'lib/slidr',
         'scrollto': 'lib/scrollto.min',
-        'modal': 'lib/modal'
+        'modal': 'lib/modal',
+        'parallax': 'lib/parallax'
     },
     shim: {
         'jQuery': {
@@ -34,7 +35,13 @@ require(['jQuery'], function ($) {
             });
         });
     });
-    require(['modal']);
+    require(['modal'], function() {
+        showModal(); 
+    });
+    require(['parallax'], function (){
+        parallaxInit();
+    });
+
 });
 
 require(['slidr'], function (slidr) {
@@ -48,6 +55,16 @@ require(['slidr'], function (slidr) {
         controls: 'none'
     }).add('h', ['one', 'two', 'three', 'four', 'one'])
       .auto(5000);
+    slidr.create('slidr-div2', {
+        direction: 'vertical',
+        overflow: true,
+        pause: false,
+        timing: { 'cube': '1.5s ease-in' },
+        touch: true,
+        transition: 'cube',
+        controls: 'none'
+    }).add('h', ['one', 'two', 'three', 'four', 'one'])
+      .auto(5000);  
 });
 
 

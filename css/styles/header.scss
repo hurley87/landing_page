@@ -1,3 +1,7 @@
+body {
+  background-color: #000;
+}
+
 header {
   $orange: #f39c12;
   background-image: url('../images/login-background.jpg');
@@ -5,7 +9,7 @@ header {
   max-height: 800px;
   width: 100%;
   background-size: cover;
-  background-repeat: none;
+  background-repeat: no-repeat;
   background-position: center 35%;
   text-align: center;
 

@@ -5,6 +5,8 @@
 	    <title>subzie</title>
 	    <link rel="stylesheet" type="text/css" href="css/main.css">
 	    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+	    <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	    <link rel="stylesheet" href="css/animate.css">
 	    <script data-main="js/main" src="js/lib/require.js"></script>
 	</head>
 	<body>
@@ -16,11 +18,11 @@
 		  <!-- nav  -->
 		  <div class="navigation">
 			  <div class="navigation-wrapper">
-			  	<button class="js-menu-trigger sliding-menu-button"><a href="#" class="nav-menu">MENU</a></button>
+			  	<button class="js-menu-trigger sliding-menu-button"><a href="#" class="nav-menu"><i class="fa fa-bars"></i> MENU</a></button>
 					<nav class="js-menu sliding-menu-content">
 						<a class='scroll-link' href="#top"><img width='140' height="52" src="images/black-logo.png"></a>
 					  <ul>
-					    <li><a class='scroll-link' href="#findgame">find a game</a></li>
+					  	<li><a class='scroll-link' href="#sub-soln">why subzie?</a></li>
 					    <li><a class='scroll-link' href="#findsub">find subs</a></li>
 					    <li><a class='scroll-link' href="#leagues">affiliated leagues</a></li>
 					    <li><a class='scroll-link' href="#contact">contact</a></li>
@@ -39,6 +41,13 @@
 				    <div class="modal-inner">
 				      <label class="modal-close" for="modal-1"></label>
 				      <h1>Sign In</h1>
+				      <form>
+					      	<label for='email'>Email</label>
+					      	<input id='email' type='email'> 
+					      	<label for='password'>Password</label>
+					      	<input id='password' type='password'> 
+					      	<input type='submit' value='submit'>
+				      </form>
 				    </div>
 			    </div>
 			  </div>
@@ -56,28 +65,100 @@
 		  <div id='logo'>
 		  	<img src="images/logo-bg.png">
 		  </div>
-		  <p class='tagline'>The app recreational sports has been waiting for. <br> Your team should never be short on players again. 
+		  <p class='tagline'> Your team should never be short on players again. 
 		  </p>
-		  <button class='signup-btn'>sub in today</button>
+		  <button class='signup-btn animated rubberBand'>sub in today</button>
 		  <div class='dropdown-arrow'>
 		  		<img src="images/dropdown.png">
 		  </div>
 		</header>
-
-		<!-- first section -->
-		<section id='findgame'>
+		<div class='content'>
+			<section id='sub-soln'>
+				<div class='container'>
+					<div class='soln-info'>
+						<h1>The app recreational sports has been waiting&nbsp;for.</h1>
+						<p>Subzie connects teams looking for Substitute players with players looking for a game.</p>
+					</div>
+					<div class='soln-img'>
 			
-		</section>
+					</div>
+				</div>
+				<br class='clear'>
+			</section>
+			<!-- first section -->
+			<section id='findgame'>
+				<div class="cards">
+				  <div class="card">
+				    <div class="card-image">
+				      <img src="images/hockey-pic.png" alt="">
+				    </div>
+				    <div class="card-header">
+				      Team Captains
+				    </div>
+				    <div class="card-copy">
+				      <h3>Find the right Sub</h3>
+				      <ul>
+				      	<li>The easiest way to connect teams to players</li>
+				      	<li>Avoid forfeiting or having games cancelled</li>
+				      </ul>
+				    </div>
+				  </div>
 
-		<!-- second section -->
-		<section id='findsub'>
-			
-		</section>
+				  <div class="card">
+				    <div class="card-image">
+				      <img src="images/ultimate.png" alt="">
+				    </div>
+				    <div class="card-header">
+				      Players
+				    </div>
+				    <div class="card-copy">
+				      <h3>Get in the game</h3>
+				      <ul>
+				      	<li>Helps you get in any game you love to play  </li>
+						<li>Meet people who share your interest and skill level  </li>
+				      </ul>
+				    </div>
+				  </div>
 
-		<!-- third section -->
-		<section id='leagues'>
-			
-		</section>
+				  <div class="card">
+				    <div class="card-image">
+				      <img src="images/rugby.png" alt="">
+				    </div>
+				    <div class="card-header">
+				     Leagues 
+				    </div>
+				    <div class="card-copy">
+				      <h3>Improve member experience</h3>
+				      <ul>
+				      	<li>Boost overall revenue and league growth</li>
+				      	<li>Improve your product for new and existing members </li>
+				      </ul>
+				    </div>
+				  </div>
+				</div>
+			</section>
+
+
+			<section class='testimonials'>
+				<h1>What Players are Saying</h1>
+				<div id="slidr-div2">
+				    <div class='quote' data-slidr="one">"Subzie is so cool I use it all the time."</div>
+				    <div class='quote' data-slidr="two">"I use to play only a couple nights a week. Now I can play almost every night!"</div>
+				    <div class='quote' data-slidr="three">"There's no better way to stay active and in shape."</div>
+				    <div class='quote' data-slidr="four">"I met some of my best buddies through Subzie."</div> 
+			    </div>
+			</section>
+
+			<!-- second section -->
+			<section id='findsub'>
+				
+			</section>
+
+			<!-- third section -->
+			<section id='leagues'>
+				<h1>Trusted by Canada's Top Leagues</h1>
+			</section>
+		</div>
 
 		<!-- footer -->
 		<footer id='contact'>

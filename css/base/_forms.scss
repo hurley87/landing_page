@@ -1,4 +1,4 @@
-/*fieldset {
+fieldset {
   background-color: lighten($base-border-color, 10%);
   border: $base-border;
   margin: 0 0 $small-spacing;
@@ -15,7 +15,6 @@ select {
 
 label {
   font-weight: 600;
-  margin-bottom: $small-spacing / 2;
 
   &.required::after {
     content: "*";
@@ -75,4 +74,4 @@ select {
   margin-bottom: $base-spacing;
   max-width: 100%;
   width: auto;
-}*/
+}

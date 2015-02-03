@@ -1,4 +1,4 @@
-$(function() {
+function showModal() {
   $("#modal-1").on("change", function() {
     if ($(this).is(":checked")) {
       $("body").addClass("modal-open");
@@ -14,4 +14,4 @@ $(function() {
   $(".modal-inner").on("click", function(e) {
     e.stopPropagation();
   });
-});
+}
