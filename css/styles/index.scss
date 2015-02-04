@@ -1,9 +1,12 @@
+body {
+	font-family: 'Muli', sans-serif;
+}
 
 section {
 	height: 500px;
 
 	padding: 2em;
-	padding-top: 6em;
+	padding-top: 4em;
 }
 
 .container {
@@ -43,7 +46,7 @@ section {
 	.soln-img { 
 		@include span-columns(6); 
 		background-image: url('../images/ven.png');
-		background-position: center center;
+		background-position: center right;
 		background-repeat: no-repeat;
 		height: 350px;
 		@include media(max-width 420px) {

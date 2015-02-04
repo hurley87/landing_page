@@ -8,7 +8,6 @@
   $large-screen: em(860) !default;
   $modal-padding: 1em;
   $modal-close-color: $light-gray;
-
  
   .modal-window { 
     @include transition(opacity 0.25s ease);
@@ -33,8 +32,9 @@
   .modal-close {
     @include position(absolute, ($modal-padding /2) ($modal-padding /2) null null);
     @include size(1.5em);
-    background: $modal-background;
     cursor: pointer;
+    color: #f39c12;
+
 
     &:after,
     &:before {
@@ -59,12 +59,10 @@
 
   .modal-inner {
     @include transition(opacity 0.25s ease);
-    background: $modal-background;
+    @include linear-gradient(#3498db, #000);
     border-radius: 5px;
     margin-top: 0;
     margin: auto;
-    max-height: 95%;
-    overflow: auto;
     padding: $modal-padding / 2;
     position: relative;
     width: 95%;
@@ -72,8 +70,10 @@
     i {
       float: left;
     }
-    input {
-      float: right;
+    input[type='submit'] {
+      @include button(shiny, #f39c12);
+      color: #fff;
+      text-align: center;
     }
 
     @include media($medium-screen) {
@@ -87,10 +87,53 @@
     }
 
     h1 {
-      color: $base-font-color;
+      color: #fff;
+      width: 100%;
       margin-bottom: 0.6em;
       text-align: left;
       text-transform: capitalize;
+      text-align: center;
+    }
+
+  
+
+    .form-feild {
+      display: block;
+      width: 100%;
+      height: 50px;
+    }
+
+    .fa-user {
+      color: #f39c12;
+      vertical-align: middle;
+      position: relative;
+      top: 5px;
+    }
+
+    .fa-lock {
+      color: #f39c12;
+      height: 50px;
+      position: relative;
+      top: 5px;
+    }
+    #email {
+      float: right;
+       width: 90%;
+
+    }
+    #password {
+      float: right;
+      width: 90%;
+    }
+
+    p {
+      text-align: center;
+      color: white;
+      height: auto;
+    }
+
+    a {
+      text-decoration: underline;
     }
 
     .modal-intro {
@@ -114,14 +157,6 @@
   .modal-state:checked + .modal-window .modal-inner {
     top: 0.3em;
   }
-}
-
-.modal-open {
-  overflow: hidden;
-}
-
-.modal-closed {
-  overflow: auto;
 }
 
 
