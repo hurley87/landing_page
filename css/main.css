@@ -355,9 +355,13 @@ section {
   text-align: center;
   padding-top: 2em; }
   .testimonials .quote {
-    margin: auto;
+    display: block;
     width: 100%;
     font-size: 1.5em; }
+    .testimonials .quote::after {
+      clear: both;
+      content: "";
+      display: table; }
 
 footer {
   height: 300px;
