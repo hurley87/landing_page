@@ -60,11 +60,7 @@ header {
      }
   }
 
-  .signup-btn {
-    @include button(shiny, #f39c12);
-    color: white;
-    font-size: 1.5em;
-  }  
+
 
   .dropdown-arrow {
      padding-top: 75px;
@@ -72,3 +68,8 @@ header {
   }
 
  } 
+   .signup-btn {
+    @include button(shiny, #f39c12);
+    color: white;
+    font-size: 1.5em;
+  }  

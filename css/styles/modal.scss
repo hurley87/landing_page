@@ -3,12 +3,10 @@
 }
 
 .modal {
-  $base-border-color: gainsboro !default;
-  $base-line-height: 1.5em !default;
   $modal-background: #fff;
   $medium-screen: em(640) !default;
   $large-screen: em(860) !default;
-  $modal-padding: 2em;
+  $modal-padding: 1em;
   $modal-close-color: $light-gray;
 
  
@@ -70,6 +68,13 @@
     padding: $modal-padding / 2;
     position: relative;
     width: 95%;
+
+    i {
+      float: left;
+    }
+    input {
+      float: right;
+    }
 
     @include media($medium-screen) {
       max-height: 70%;

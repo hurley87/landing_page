@@ -229,7 +229,7 @@ section {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 40.29137%; }
+    width: 48.82117%; }
     #sub-soln .soln-info h1 {
       font-size: 2.7em; }
     #sub-soln .soln-info p {
@@ -256,7 +256,10 @@ section {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 40.29137%; }
+    width: 48.82117%;
+    background-image: url("../images/ven.png");
+    background-size: cover;
+    height: 350px; }
     #sub-soln .soln-img:last-child {
       margin-right: 0; }
     @media screen and (max-width: 420px) {
@@ -291,9 +294,9 @@ section {
 #leagues {
   background-color: #000;
   background-image: -webkit-linear-gradient(bottom, #000, #3498db);
-  background-image: linear-gradient(to top,#000, #3498db); }
+  background-image: linear-gradient(to top,#000, #3498db);
+  text-align: center; }
   #leagues h1 {
-    text-align: center;
     color: white; }
 
 .testimonials {
@@ -495,36 +498,37 @@ header {
         margin-bottom: 20px;
         font-size: 1.5em;
         text-align: left; } }
-  header .signup-btn {
-    border: 1px solid #7e2d00;
-    border-bottom: 1px solid #751d00;
-    border-radius: 5px;
-    box-shadow: inset 0 1px 0 0 #ffb91e;
-    color: #333333;
-    display: inline-block;
-    font-size: inherit;
-    font-weight: bold;
-    background-color: #f39c12;
-    background-image: -webkit-linear-gradient(top, #f39c12 0%, #bb6a00 50%, #9d5100 50%, #a45600 100%);
-    background-image: linear-gradient(to bottom,#f39c12 0%, #bb6a00 50%, #9d5100 50%, #a45600 100%);
-    padding: 7px 18px;
-    text-align: center;
-    text-decoration: none;
-    text-shadow: 0 -1px 1px #ffa71a;
-    color: white;
-    font-size: 1.5em; }
-    header .signup-btn:hover:not(:disabled) {
-      cursor: pointer;
-      background-color: #e68d00;
-      background-image: -webkit-linear-gradient(top, #e68d00 0%, #b15e00 50%, #964700 50%, #9d4c00 100%);
-      background-image: linear-gradient(to bottom,#e68d00 0%, #b15e00 50%, #964700 50%, #9d4c00 100%); }
-    header .signup-btn:active:not(:disabled), header .signup-btn:focus:not(:disabled) {
-      box-shadow: inset 0 0 20px 0 #842800; }
-    header .signup-btn:disabled {
-      opacity: 0.5;
-      cursor: not-allowed; }
   header .dropdown-arrow {
     padding-top: 75px; }
+
+.signup-btn {
+  border: 1px solid #7e2d00;
+  border-bottom: 1px solid #751d00;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 0 0 #ffb91e;
+  color: #333333;
+  display: inline-block;
+  font-size: inherit;
+  font-weight: bold;
+  background-color: #f39c12;
+  background-image: -webkit-linear-gradient(top, #f39c12 0%, #bb6a00 50%, #9d5100 50%, #a45600 100%);
+  background-image: linear-gradient(to bottom,#f39c12 0%, #bb6a00 50%, #9d5100 50%, #a45600 100%);
+  padding: 7px 18px;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: 0 -1px 1px #ffa71a;
+  color: white;
+  font-size: 1.5em; }
+  .signup-btn:hover:not(:disabled) {
+    cursor: pointer;
+    background-color: #e68d00;
+    background-image: -webkit-linear-gradient(top, #e68d00 0%, #b15e00 50%, #964700 50%, #9d4c00 100%);
+    background-image: linear-gradient(to bottom,#e68d00 0%, #b15e00 50%, #964700 50%, #9d4c00 100%); }
+  .signup-btn:active:not(:disabled), .signup-btn:focus:not(:disabled) {
+    box-shadow: inset 0 0 20px 0 #842800; }
+  .signup-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed; }
 
 .modal-state {
   display: none !important; }
@@ -556,8 +560,8 @@ header {
     cursor: pointer; }
 .modal .modal-close {
   position: absolute;
-  top: 1em;
-  right: 1em;
+  top: 0.5em;
+  right: 0.5em;
   height: 1.5em;
   width: 1.5em;
   background: #fff;
@@ -597,13 +601,17 @@ header {
   margin: auto;
   max-height: 95%;
   overflow: auto;
-  padding: 1em;
+  padding: 0.5em;
   position: relative;
   width: 95%; }
+  .modal .modal-inner i {
+    float: left; }
+  .modal .modal-inner input {
+    float: right; }
   @media screen and (min-width: 40em) {
     .modal .modal-inner {
       max-height: 70%;
-      padding: 2em;
+      padding: 1em;
       width: 30%; } }
   @media screen and (min-width: 53.75em) {
     .modal .modal-inner {

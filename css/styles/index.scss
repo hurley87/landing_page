@@ -27,7 +27,7 @@ section {
 		p {
 			font-size: 1.7em;
 		}
-		@include span-columns(5); 
+		@include span-columns(6); 
 		@include media(max-width 420px) {
 		    @include span-columns(12);
 		    @include shift(0);
@@ -35,7 +35,10 @@ section {
 		}
 	}
 	.soln-img { 
-		@include span-columns(5); 
+		@include span-columns(6); 
+		background-image: url('../images/ven.png');
+		background-size: cover;
+		height: 350px;
 		@include media(max-width 420px) {
 		    @include span-columns(12);
 		}
@@ -54,9 +57,10 @@ section {
 
 #leagues {
 	@include linear-gradient(to top,  #000, #3498db);
+	text-align: center;
 
 	h1 {
-		text-align: center;
+		
 		color: white;
 	}
 }
