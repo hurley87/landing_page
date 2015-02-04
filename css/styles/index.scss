@@ -1,7 +1,9 @@
 
 section {
-	height: 400px;
+	height: 500px;
+
 	padding: 2em;
+	padding-top: 6em;
 }
 
 .container {
@@ -10,6 +12,10 @@ section {
 
 .clear {
 	clear: both;
+}
+
+.content {
+	background-color: white;
 }
 
 #sub-soln  {
@@ -37,7 +43,8 @@ section {
 	.soln-img { 
 		@include span-columns(6); 
 		background-image: url('../images/ven.png');
-		background-size: cover;
+		background-position: center center;
+		background-repeat: no-repeat;
 		height: 350px;
 		@include media(max-width 420px) {
 		    @include span-columns(12);
@@ -53,6 +60,30 @@ section {
 #findsub {
     @include row();
 	@include linear-gradient(to top,  #3498db, #fff);
+
+	.sub-info { 
+		h1 {
+			font-size: 2.7em;
+
+		}
+
+		p {
+			font-size: 1.7em;
+		}
+		@include span-columns(6); 
+		@include media(max-width 420px) {
+		    @include span-columns(12);
+		    @include shift(0);
+		    @include outer-container(100%)
+		}
+	}
+	.sub-finder { 
+		@include span-columns(6); 
+	
+		@include media(max-width 420px) {
+		    @include span-columns(12);
+		}
+	}
 }
 
 #leagues {
@@ -67,9 +98,9 @@ section {
 
 .testimonials {
 	background-color: white;
-	height: 200px;
+	height: 150px;
 	text-align: center;
-
+	padding-top: 2em;
 	h1 {
 		
 	}
