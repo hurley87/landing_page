@@ -31,7 +31,6 @@
   border-radius: $base-border-radius;
   border: $card-border;
   box-shadow: 0 2px 4px darken($base-background-color, 10%);
-  cursor: pointer;
   margin: 0 $card-margin $base-spacing $card-margin;
   position: relative;
   position: relative;
@@ -74,14 +73,14 @@
   &:focus,
   &:hover {
     @include transition (all 0.2s ease-in-out);
-    background-color: #3498db;
+
     
     .card-image img {
-      background: #3498db;
+      
     }
   
     .card-header {
-      background-color: #3498db;
+      
     }
   }
 

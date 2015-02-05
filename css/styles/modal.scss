@@ -59,7 +59,7 @@
 
   .modal-inner {
     @include transition(opacity 0.25s ease);
-    @include linear-gradient(#3498db, #000);
+    @include linear-gradient(#3498db, #013e66);
     border-radius: 5px;
     margin-top: 0;
     margin: auto;
@@ -74,6 +74,7 @@
       @include button(shiny, #f39c12);
       color: #fff;
       text-align: center;
+      font-size: 1.5em;
     }
 
     @include media($medium-screen) {

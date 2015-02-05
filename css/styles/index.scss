@@ -23,7 +23,7 @@ section {
 }
 
 #sub-soln  {
-	@include row();
+	@include clearfix;
 	@include linear-gradient(to top,  #3498db, #013e66);
 	background-color: #013e66;
 	color: white;
@@ -57,12 +57,12 @@ section {
 }
 
 #findgame {
-	@include row();
+	@include clearfix;
 	@include linear-gradient(to top,  #fff, #3498db);
 }
 
 #findsub {
-    @include row();
+   @include clearfix;
 	@include linear-gradient(to top,  #3498db, #fff);
 
 	.sub-info { 
@@ -91,28 +91,13 @@ section {
 }
 
 #leagues {
+	@include clearfix;
 	@include linear-gradient(to top,  #013e66, #3498db);
 	text-align: center;
 
 	h1 {
 		
 		color: white;
-	}
-}
-
-.testimonials {
-	background-color: white;
-	height: 150px;
-	text-align: center;
-	padding-top: 2em;
-	h1 {
-		
-	}
-	.quote {
-	@include row();
-	
-		width: 100%;
-		font-size: 1.5em;
 	}
 }
 
