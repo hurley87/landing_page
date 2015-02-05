@@ -95,6 +95,12 @@
     border: 1px solid $white;
     padding: 8px 15px 2px 15px;
     border-radius: 5px;
+
+    &:hover {
+        @include transition(all 1s ease-in-out);
+        background-color: $blue;
+        color: white;
+      }
   }
 
   .signin-btn {
@@ -110,7 +116,7 @@
       cursor: pointer;
 
       &:hover {
-        @include transition(all 1.5s ease-in-out);
+        @include transition(all 1s ease-in-out);
         background-color: $blue;
         color: white;
       }
