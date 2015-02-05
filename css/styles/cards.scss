@@ -41,13 +41,13 @@
   .card-image {
     overflow: hidden;
     max-height: 200px;
+    text-align: center;
 
     img {
       @include transition (all 0.2s ease-in-out);
-      background: $card-image-background;
+      background: #fff;
       border-top-left-radius: $base-border-radius;
       border-top-right-radius: $base-border-radius;
-      width: 100%;
     }
   }
 
@@ -73,14 +73,15 @@
   
   &:focus,
   &:hover {
-    background-color: $card-hover-background;
+    @include transition (all 0.2s ease-in-out);
+    background-color: #3498db;
     
     .card-image img {
-      background: $card-image-hover-background;
+      background: #3498db;
     }
   
     .card-header {
-      background-color: $card-hover-background;
+      background-color: #3498db;
     }
   }
 

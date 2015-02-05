@@ -1,5 +1,6 @@
 body {
 	font-family: 'Muli', sans-serif;
+	background-color: #013e66;
 }
 
 section {
@@ -23,8 +24,8 @@ section {
 
 #sub-soln  {
 	@include row();
-	@include linear-gradient(to top,  #3498db, #000);
-	background-color: #000;
+	@include linear-gradient(to top,  #3498db, #013e66);
+	background-color: #013e66;
 	color: white;
 	clear: both;
 	.soln-info { 
@@ -90,7 +91,7 @@ section {
 }
 
 #leagues {
-	@include linear-gradient(to top,  #000, #3498db);
+	@include linear-gradient(to top,  #013e66, #3498db);
 	text-align: center;
 
 	h1 {
@@ -117,5 +118,5 @@ section {
 
 footer {
 	height: 300px;
-	background-color: #000;
+	background-color: #013e66;
 }

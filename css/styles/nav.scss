@@ -5,13 +5,12 @@
   $blue: #3498db;
   $large-screen: em(860) !default;
   $navigation-padding: 1em;
-  $navigation-background: $black;
   $navigation-color-hover: white;
   $navigation-height: 52px;
   $horizontal-bar-mode: $large-screen;
 
   position: fixed;
-  background-color: $navigation-background;
+  background-color: #013e66;
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
@@ -46,7 +45,7 @@
   z-index: 999999;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch; 
-  linear
+  background-color: #013e66;
 
   ul {
     padding: 0;
@@ -88,12 +87,14 @@
   }
 
   .sliding-menu-button {
-    @include button(shiny, $blue);
     height: 40px;
-    margin-top: 7px;
+    margin-top: 5px;
     float: left;
-    color: $white;
+    color: $blue;
     margin-left: 10px; 
+    border: 1px solid $white;
+    padding: 8px 15px 2px 15px;
+    border-radius: 5px;
   }
 
   .signin-btn {
@@ -102,8 +103,8 @@
     line-height: 52px;
     
     .modal-trigger {
-      color: $blue;
-      border: 1px solid $blue;
+      color: $white;
+      border: 1px solid $white;
       padding: 5px 15px 8px 15px;
       border-radius: 5px;
       cursor: pointer;
