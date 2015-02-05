@@ -343,13 +343,22 @@ section {
   background-color: #013e66;
   background-image: -webkit-linear-gradient(bottom, #013e66, #3498db);
   background-image: linear-gradient(to top,#013e66, #3498db);
-  text-align: center; }
+  text-align: center;
+  height: auto; }
   #leagues::after {
     clear: both;
     content: "";
     display: table; }
   #leagues h1 {
     color: white; }
+  #leagues p {
+    color: white;
+    font-size: 1.5em;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 30px; }
+  #leagues img {
+    margin: 20px; }
 
 footer {
   height: 300px;

@@ -94,10 +94,22 @@ section {
 	@include clearfix;
 	@include linear-gradient(to top,  #013e66, #3498db);
 	text-align: center;
+	height: auto;
 
 	h1 {
 		
 		color: white;
+	}
+
+	p {
+		color: white;
+		font-size: 1.5em;
+		width: 70%;
+		margin: auto;
+		margin-bottom: 30px;
+	}
+	img {
+	 margin: 20px;
 	}
 }
 
