@@ -1,0 +1,24 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "description": "landing page prototype",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hurley87/landing_page.git"
+  },
+  "author": "dave hurley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hurley87/landing_page/issues"
+  },
+  "homepage": "https://github.com/hurley87/landing_page",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-jshint": "^0.11.0",
+    "grunt-contrib-uglify": "^0.7.0"
+  }
+}

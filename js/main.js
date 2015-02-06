@@ -36,7 +36,7 @@ require(['jQuery'], function ($) {
         });
     });
     require(['modal'], function() {
-        showModal(); 
+        
     });
     require(['parallax'], function (){
         parallaxInit();
