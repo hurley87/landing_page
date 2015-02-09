@@ -1,14 +1,14 @@
-.navigation {
-  $black: #000;
-  $white: #fff;
-  $orange: #f39c12;
-  $blue: #3498db;
-  $large-screen: em(860) !default;
-  $navigation-padding: 1em;
-  $navigation-color-hover: white;
-  $navigation-height: 52px;
-  $horizontal-bar-mode: $large-screen;
+$black: #000;
+$white: #fff;
+$orange: #f39c12;
+$blue: #3498db;
+$large-screen: em(860) !default;
+$navigation-padding: 1em;
+$navigation-color-hover: white;
+$navigation-height: 52px;
+$horizontal-bar-mode: $large-screen;
 
+.navigation {
   position: fixed;
   background-color: #013e66;
   min-height: $navigation-height;

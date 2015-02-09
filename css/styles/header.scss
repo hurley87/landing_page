@@ -1,6 +1,6 @@
+$orange: #f39c12;
 
 header {
-  $orange: #f39c12;
   background-image: url('../images/hero-img.png;');
   height: 100vh;
   max-height: 800px;
@@ -57,8 +57,6 @@ header {
      }
   }
 
-
-
   .dropdown-arrow {
      padding-top: 75px;
 
@@ -66,7 +64,7 @@ header {
 
  } 
    .signup-btn {
-    @include button(shiny, #f39c12);
+    @include button(shiny, $orange);
     color: white;
     font-size: 1.5em;
   }  

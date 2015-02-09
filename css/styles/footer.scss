@@ -1,9 +1,17 @@
+$base-spacing: 1.5em !default;
+$base-accent-color: #013e66;
+$medium-screen: em(640) !default;
+$large-screen: em(860) !default;
+$footer-color: white;
+$footer-link-color: transparentize($footer-color, 0.6);
+$footer-disclaimer-color: transparentize($footer-color, 0.6);
+
 .footer {
-  $base-spacing: 1.5em !default;
-  $base-accent-color: #013e66;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
-  
+
+background: #013e66;
+padding: ($base-spacing * 2) $gutter;
+width: 100%;
+
   ul {
     padding: 0;
   }
@@ -16,14 +24,6 @@
   a {
     text-decoration: none;
   }
-
-  $footer-color: white;
-  $footer-link-color: transparentize($footer-color, 0.6);
-  $footer-disclaimer-color: transparentize($footer-color, 0.6);
-
-  background: #013e66;
-  padding: ($base-spacing * 2) $gutter;
-  width: 100%;
 
   .footer-logo {
     margin-bottom: 3em;

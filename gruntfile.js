@@ -41,9 +41,17 @@ module.exports = function(grunt) {
 
 		clean: {
 			target: ['js/main.min.js']
+		},
+		wiredep: {
+		  task: {
+		    src: [
+		      'index.html'        
+		    ]
+		  }
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-wiredep');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-concat');

@@ -1,18 +1,18 @@
+$modal-background: #fff;
+$medium-screen: em(640) !default;
+$large-screen: em(860) !default;
+$modal-padding: 1em;
+$modal-close-color: $light-gray;
+
 .modal-state {
    display: none !important;
 }
 
 .modal {
-  $modal-background: #fff;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
-  $modal-padding: 1em;
-  $modal-close-color: $light-gray;
- 
-  .modal-window { 
-    @include transition(opacity 0.25s ease);
+   .modal-window { 
+    @include transition(opacity 1s ease);
     @include position(fixed, 0px 0px 0px 0px);
-    background: rgba(0,0,0, 0.85);
+    background: rgba(0,0,0, 0.55);
     opacity: 0;
     padding-top: 0.2em;
     text-align: left;
@@ -59,7 +59,7 @@
 
   .modal-inner {
     @include transition(opacity 0.25s ease);
-    @include linear-gradient(#3498db, #013e66);
+    background-color: #013e66;
     border-radius: 5px;
     margin-top: 0;
     margin: auto;
@@ -95,8 +95,6 @@
       text-transform: capitalize;
       text-align: center;
     }
-
-  
 
     .form-feild {
       display: block;

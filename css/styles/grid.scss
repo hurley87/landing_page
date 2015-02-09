@@ -1,17 +1,21 @@
-
+$base-background-color: none !default;
+$dark-gray: #333 !default;
+$light-gray: #DDD !default;
+$medium-screen: em(640) !default;
+$large-screen: em(860) !default;
+$base-font-color: $dark-gray !default;
+$grid-item-border: 1px solid transparentize($base-font-color, 0.8); 
+$grid-item-big-columns: 8;
+$grid-item-color: $base-font-color;
+$grid-item-height: 14em;
 
 @mixin grid-item-columns($columns) {
   width: (100% / 12) * $columns;
 }
 
 .grid-items-lines {
-  $base-background-color: white !default;
-  $dark-gray: #333 !default;
-  $light-gray: #DDD !default;
-  $medium-screen: em(640) !default;
-  $large-screen: em(860) !default;
-  $base-font-color: $dark-gray !default;
   @include outer-container();
+  @include clearfix;
 
   h1 {
     padding-bottom: 20px;
@@ -21,20 +25,12 @@
     line-height: 1.5em;
   }
 
-  $grid-items-background: $base-background-color;
-  $grid-item-background: $base-background-color;
-  $grid-item-border: 1px solid transparentize($base-font-color, 0.8); 
-  $grid-item-columns: 4;
-  $grid-item-big-columns: 8;
-  $grid-item-color: $base-font-color;
-  $grid-item-height: 14em;
-
-  @include clearfix;
-  position: relative;
-    
   .grid-item {
     @include transition (all 0.2s ease-in-out);
-    background: $grid-item-background;
+    @include media($large-screen) {
+      @include grid-item-columns(4);
+    }
+
     border-bottom: $grid-item-border;
     border-right: $grid-item-border;
     cursor: pointer;
@@ -45,10 +41,6 @@
     padding: 2em;
     width: 100%;
     text-align: center;
-
-    @include media($large-screen) {
-      @include grid-item-columns($grid-item-columns);
-    }
 
     &:focus,
     &:hover {
@@ -83,7 +75,6 @@
     }
   }
   .bottom-cover {
-    background: $grid-items-background;
     bottom: 0px;
     height: 3px;
     position: absolute;
@@ -91,7 +82,6 @@
   }
 
   .right-cover {
-    background: $grid-items-background;
     height: 100%;
     position: absolute;
     right: 0px;

@@ -1,0 +1,19 @@
+{
+  "name": "landing",
+  "version": "0.0.0",
+  "homepage": "https://github.com/hurley87/landing_page",
+  "authors": [
+    "david hurley <dhurls99@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}

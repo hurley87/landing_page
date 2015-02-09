@@ -22,6 +22,10 @@ section {
 	background-color: white;
 }
 
+.testimonials {
+	background-color: #fff;
+}
+
 #sub-soln  {
 	@include clearfix;
 	@include linear-gradient(to top,  #3498db, #013e66);

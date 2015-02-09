@@ -221,6 +221,9 @@ section {
 .content {
   background-color: white; }
 
+.testimonials {
+  background-color: #fff; }
+
 #sub-soln {
   background-color: #3498db;
   background-image: -webkit-linear-gradient(bottom, #3498db, #013e66);
@@ -566,15 +569,15 @@ header {
   display: none !important; }
 
 .modal .modal-window {
-  -webkit-transition: opacity 0.25s ease;
-  -moz-transition: opacity 0.25s ease;
-  transition: opacity 0.25s ease;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  transition: opacity 1s ease;
   position: fixed;
   top: 0px;
   right: 0px;
   bottom: 0px;
   left: 0px;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.55);
   opacity: 0;
   padding-top: 0.2em;
   text-align: left;
@@ -627,9 +630,7 @@ header {
   -webkit-transition: opacity 0.25s ease;
   -moz-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
-  background-color: #3498db;
-  background-image: -webkit-linear-gradient(#3498db, #013e66);
-  background-image: linear-gradient(#3498db, #013e66);
+  background-color: #013e66;
   border-radius: 5px;
   margin-top: 0;
   margin: auto;
@@ -754,6 +755,10 @@ header {
     clear: both;
     content: "";
     display: table; }
+  .cards::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .card {
   -webkit-flex-basis: 15em;
@@ -764,10 +769,9 @@ header {
   -moz-flex-grow: 1;
   flex-grow: 1;
   -ms-flex-positive: 1;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  background-color: #f7f7f7;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
   border-radius: 3px;
   border: 1px solid #ddd;
   box-shadow: 0 2px 4px #217dbb;
@@ -782,14 +786,12 @@ header {
       -webkit-transition: all 0.2s ease-in-out;
       -moz-transition: all 0.2s ease-in-out;
       transition: all 0.2s ease-in-out;
-      background: #fff;
       border-top-left-radius: 3px;
       border-top-right-radius: 3px; }
   .card .card-header {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    background-color: #f7f7f7;
     border-bottom: 1px solid #ddd;
     border-radius: 3px 3px 0 0;
     font-weight: bold;
@@ -801,20 +803,23 @@ header {
     padding: 0.75em 0.75em; }
     .card .card-copy p {
       margin: 0 0 0.75em; }
-  .card:focus, .card:hover {
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-  .card:active {
-    background-color: #f7f7f7; }
-    .card:active .card-header {
-      background-color: #f7f7f7; }
+  @media screen and (max-width: 500px) {
+    .card {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 100%; }
+      .card:last-child {
+        margin-right: 0; } }
 
 .grid-items-lines {
   max-width: 68em;
   margin-left: auto;
-  margin-right: auto;
-  position: relative; }
+  margin-right: auto; }
+  .grid-items-lines::after {
+    clear: both;
+    content: "";
+    display: table; }
   .grid-items-lines::after {
     clear: both;
     content: "";
@@ -823,15 +828,10 @@ header {
     padding-bottom: 20px; }
   .grid-items-lines p {
     line-height: 1.5em; }
-  .grid-items-lines::after {
-    clear: both;
-    content: "";
-    display: table; }
   .grid-items-lines .grid-item {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    background: #fff;
     border-bottom: 1px solid rgba(51, 51, 51, 0.2);
     border-right: 1px solid rgba(51, 51, 51, 0.2);
     cursor: pointer;
@@ -866,13 +866,11 @@ header {
     .grid-items-lines .grid-item-big p {
       max-width: 60%; } }
   .grid-items-lines .bottom-cover {
-    background: #fff;
     bottom: 0px;
     height: 3px;
     position: absolute;
     width: 100%; }
   .grid-items-lines .right-cover {
-    background: #fff;
     height: 100%;
     position: absolute;
     right: 0px;
