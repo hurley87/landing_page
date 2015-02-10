@@ -1,0 +1,165 @@
+.captain {
+	background-color: black;
+	height: 50px;
+	width: 100%;
+	position: fixed;
+	z-index: 999999;
+	background-color: #03aef0;
+	text-align: center;
+	color: #013e66;
+}
+
+header {
+	background-image: url('../images/login-background.jpg');
+	background-position: top center;
+}
+
+.captain h3 {
+	line-height: 50px;
+	font-family: 'Muli', sans-serif;
+	width: 75%;
+	margin: auto;
+
+}
+
+.captain .fa-times {
+	float: right;
+	margin-top: 15px;
+	cursor: pointer;
+}
+
+.captain .register {
+	border: 1px solid #013e66;
+	background-color: #013e66; 
+	border-radius: 10px;
+	color: #03aef0;
+	padding: 5px 10px 5px 10px;
+	cursor: pointer;
+}
+
+.navigation {
+	top: 50px;
+	padding-top: 3px;
+}
+
+.ticker {
+	top: 82px;
+}
+
+#logo {
+	padding-top: 120px !important;
+	padding-bottom: 130px  !important;
+}
+#slider {
+    height: 150px;
+	background: transparent;
+	width: 100%;
+	position: absolute;
+	top: 250px;
+	padding-right: 10%;
+	padding-left: 10%;
+}
+.slider-wrapper {
+  position: relative;
+  height: 90%;
+  overflow: hidden;
+}
+.slider-stage {
+  position: absolute;
+  height: 100%;
+}
+.slider-item {
+	margin-top: 5px;
+  float: left;
+  width: 300px;
+  height: 90px;
+  background-color: #03111D;
+  border-radius: 10px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.35), 0 2px 2px rgba(0, 0, 0, 0.15980392), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+	-webkit-box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.35), 0 2px 2px rgba(0, 0, 0, 0.15980392), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+	-moz-box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.35), 0 2px 2px rgba(0, 0, 0, 0.15980392), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+}
+
+.slider-item .item-img {
+	float: left;
+	width: 30%;
+	height: 90px;
+	background-color: rgba(124, 180, 55, 1);
+}
+.slider-item .item-img img {
+	margin-top: 25%;
+}
+
+.slider-item .item-info {
+	float: right;
+	width: 70%;
+	height: 100%;
+	padding-top: 5%;
+	padding-left: 5%;
+}
+
+.slider-item .item-info h4 {
+	color: white;
+	text-transform: uppercase;
+	text-align: left;
+}
+
+.slider-item .item-info p {
+	text-align: left;
+	color: rgba(124, 180, 55, 1);
+	font-size: 0.6em;
+	line-height: 0.8em;
+}
+
+
+
+#next-button {
+  float: right;
+  position: relative;
+  bottom: 100px;
+  right: -40px;
+  color: #f39c12;
+}
+#prev-button {
+  float: left;
+  position: relative;
+  bottom: 100px;
+  left: -40px;
+  color: #f39c12;
+  font-style: 2em;
+}
+.slider-nav {
+  cursor: pointer;
+}
+
+.options-button {
+	background-color: rgba(124, 180, 55, 1);
+	border: 1px solid black;
+	text-shadow: rgba(255, 255, 255, 0.4) 0px 1px 1px;
+	color: black !important;
+	border-radius: 15px;
+	padding: 20px 40px;
+	z-index: 98;
+	width: 200px;
+	@include position(absolute, 50% 10px null null);
+	@include transform(translateY(-50%));
+
+	box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.35), 0 2px 2px rgba(0, 0, 0, 0.15980392), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+	-webkit-box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.35), 0 2px 2px rgba(0, 0, 0, 0.15980392), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+	-moz-box-shadow: inset 0 1px 0px rgba(255, 255, 255, 0.35), 0 2px 2px rgba(0, 0, 0, 0.15980392), transparent 0 0 0, transparent 0 0 0, transparent 0 0 0;
+}
+
+.options-button:hover  {
+	background-color: #f39c12;
+	transition: all 4s;
+}
+.js-menu {
+	z-index: 999999999999999;
+	background-color: #03111D !important;
+}
